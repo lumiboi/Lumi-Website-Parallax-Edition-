@@ -42,10 +42,11 @@ const HeroSection = () => {
     // Basit mouse tabanlı parallax (hero başlığı için)
     useLayoutEffect(() => {
         const container = titleContainerRef.current;
-        if (!container || !sectionRef.current) return;
+        const sectionEl = sectionRef.current as HTMLElement | null;
+        if (!container || !sectionEl) return;
 
         const handleMouse = (e: MouseEvent) => {
-            const rect = (sectionRef.current as HTMLElement).getBoundingClientRect();
+            const rect = sectionEl.getBoundingClientRect();
             const x = (e.clientX - rect.left) / rect.width - 0.5;
             const y = (e.clientY - rect.top) / rect.height - 0.5;
             gsap.to(container, {
@@ -59,9 +60,8 @@ const HeroSection = () => {
             });
         };
 
-        const el = sectionRef.current as HTMLElement;
-        el.addEventListener('mousemove', handleMouse);
-        return () => el.removeEventListener('mousemove', handleMouse);
+        sectionEl.addEventListener('mousemove', handleMouse);
+        return () => sectionEl.removeEventListener('mousemove', handleMouse);
     }, []);
 
     const splitText = (text: string) => {
