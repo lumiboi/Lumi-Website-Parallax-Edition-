@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Lumi Digital Experience (TR/EN)
 
-## Getting Started
+Minimal, performans odaklı ve etkileşimli bir Next.js 14 uygulaması. Özel 3D yıldız arka planı (React Three Fiber), yumuşak kaydırma (Lenis), GSAP animasyonları ve çok dilli içerik (TR/EN) içerir.
 
-First, run the development server:
+### Özellikler (TR)
+- Etkileşimli 3D yıldız alanı (arka plan, mouse/scroll duyarlı)
+- Hero başlık parallax ve giriş animasyonları
+- Hizmetler bölümü için yatay scroll + pinlenmiş sahne
+- Özel imleç ve buton/hover mikro etkileşimleri
+- Türkçe / İngilizce dil desteği
 
+### Kurulum (TR)
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Yapılandırma (TR)
+- Yol aliası: `@/*` → `src/*` (bkz. `tsconfig.json`)
+- Tailwind: `tailwind.config.js`, global stiller: `src/app/globals.css`
+- Çeviriler: `src/data/translations.ts`
+- Sağlayıcılar: `src/components/providers.tsx`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Deploy (TR)
+- Vercel önerilir. Projeyi GitHub’a push’layın → Vercel’de Import → Framework: Next.js → Deploy.
+- Özel alan adı için: Project → Settings → Domains → Add → DNS yönlendirmesi → Set as Primary.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+Minimal, performance‑driven, interactive Next.js 14 app. Includes a custom 3D starfield (React Three Fiber), smooth scrolling (Lenis), GSAP animations, and bilingual content (TR/EN).
 
-To learn more about Next.js, take a look at the following resources:
+### Features (EN)
+- Interactive 3D starfield background (mouse/scroll aware)
+- Hero title parallax and entrance animations
+- Horizontal scroll section with pinned scene for Services
+- Custom cursor and micro‑interactions
+- Turkish / English language support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Setup (EN)
+```bash
+npm install
+npm run dev
+# http://localhost:3000
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Configuration (EN)
+- Path alias: `@/*` → `src/*` (see `tsconfig.json`)
+- Tailwind: `tailwind.config.js`, global styles: `src/app/globals.css`
+- Translations: `src/data/translations.ts`
+- Providers: `src/components/providers.tsx`
 
-## Deploy on Vercel
+### Deploy (EN)
+- Recommended on Vercel. Push to GitHub → Import on Vercel → Framework: Next.js → Deploy.
+- Custom domain: Project → Settings → Domains → Add → point DNS → Set as Primary.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Lisans / License
+Bu repo MIT lisansı ile yayınlanır. / Released under MIT.
