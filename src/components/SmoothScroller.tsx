@@ -11,9 +11,6 @@ function SmoothScroller({ children }: { children: ReactNode }) {
       options={{
         lerp: 0.12,
         duration: 1.2,
-        smoothTouch: true,
-        syncTouch: true,
-        gestureOrientation: 'vertical',
       }}
     >
       {children}
